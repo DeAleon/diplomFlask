@@ -1,0 +1,23 @@
+{% extends 'menu.html' %}
+
+{% block title %}{{ cart }}{% endblock %}
+
+{% block header %}<h2>{{ cart }}</h2>{% endblock %}
+
+{% block nav %}
+<p><a href="{{ url_for('logout') }}">Выход из акаунта</a></p>
+<ul>
+    <li><a href="/">{{ title }}</a></li>
+    <li><a href="/game/">{{ game }}</a></li>
+    <li><a href="/cart/">{{ cart }}</a></li>
+
+</ul>
+{% endblock %}
+
+{% block content %}
+<h2>{{ cart_error }}</h2>
+{% endblock %}
+
+{% block footer %}
+{{ super() }}
+{% endblock %}

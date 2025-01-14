@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {{ title }} {% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    {% block header %}
+    <h1>{{ title }}</h1>
+
+    {% endblock %}
+    <nav>
+        {% block nav %}
+        <a href="/registration/">{{ reg }}</a>
+        <a href="/login/">{{ log }}</a>
+
+        <ul>
+            <li><a href="/">{{ title }}</a></li>
+            <li><a href="/game/">{{ game }}</a></li>
+            <li><a href="/cart/">{{ cart }}</a></li>
+
+        </ul>
+        {% endblock %}
+    </nav>
+
+</header>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+<div class="container">
+    <footer class="footer">
+
+        {% block footer %}
+        <h2> Дипломная рабата приложение: Flask </h2>
+        <p>Самостоятельное изучения Flask, и создание простого веб-приложения.</p>
+        <p>Автор: Олег Никитинский</p>
+        {% endblock %}
+
+    </footer>
+</div>
+</body>
+</html>
