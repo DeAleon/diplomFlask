@@ -12,7 +12,7 @@ from slugify import slugify
 def menu():
     title = 'Главная страница'
     game = 'Игры'
-    reg = 'Регистарция'
+    reg = 'Регистрация'
     cart = 'Корзина'
     log = 'Вход'
     template_context = {
@@ -32,7 +32,7 @@ def login():
     form = LoginForm()
     title = 'Главная страница'
     game = 'Игры'
-    reg = 'Регистарция'
+    reg = 'Регистрация'
     cart = 'Корзина'
     log = 'Вход'
     template_context = {
@@ -58,7 +58,7 @@ def game():
     title = 'Главная страница'
     game = 'Игры'
     games = Game.query.all()
-    reg = 'Регистарция'
+    reg = 'Регистрация'
     cart = 'Корзина'
     log = 'Вход'
     len_game = len(games)
@@ -79,7 +79,7 @@ def registration():
     form = UserForm()
     title = 'Главная страница'
     game = 'Игры'
-    reg = 'Регистарция'
+    reg = 'Регистрация'
     cart = 'Корзина'
     log = 'Вход'
     if form.validate_on_submit():
